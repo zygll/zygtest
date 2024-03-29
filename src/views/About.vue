@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- <div class="table">
-      <div class="row">
+  extextendsComp    <div class="row">
         <div class="cell">单元格 1</div>
         <div class="cell">单元格 2</div>
         <div class="cell">单元格 3</div>
@@ -47,11 +47,19 @@
         <div class="flex-cell">Row 2, Column 3</div>
       </div>
     </div> -->
+    <extendsComp
+      v-model="value1"
+      type="monthrange"
+      range-separator="至"
+      start-placeholder="开始月份"
+      end-placeholder="结束月份"
+    >
+    </extendsComp>
     <div>
       <p>拖动下方的文本到框内:</p>
       <div id="div1" @dragover.prevent @drop="drop($event)">12222</div>
       <br />
-      <span id="dragItem" draggable="true" @dragstart="drag($event)"
+      <span id="dragItem" draggable="true" @dragstart="dragstart($event)"
         >拖我!</span
       >
       <br />
@@ -73,10 +81,15 @@
   </div>
 </template>
 <script>
+import extendsComp from "@/components/extendsComp/index.vue";
 export default {
   name: "About",
+  components: {
+    extendsComp,
+  },
   data() {
-    return {
+    return { 
+      value1: "",
       input: "",
       input1: "",
     };

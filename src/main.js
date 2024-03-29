@@ -21,6 +21,13 @@ Vue.use(plugin)
 Vue.use(ZmTreeOrg);
 Vue.use(ElementUI);
 Vue.use(Avue);
+
+// import 'highlight.js/styles/stackoverflow-light.css'
+// import hljs from 'highlight.js/lib/core';
+// import javascript from 'highlight.js/lib/languages/javascript';
+// import hljsVuePlugin from "@highlightjs/vue-plugin";
+// Vue.use(hljsVuePlugin)
+
 import 'vx-easyui/dist/themes/default/easyui.css';
 import 'vx-easyui/dist/themes/icon.css';
 import 'vx-easyui/dist/themes/vue.css';
